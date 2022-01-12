@@ -1,17 +1,20 @@
-package gui;
+package WorldCupTimeline.src.gui;
 
-import javafx.geometry.*;
+import WorldCupTimeline.src.database.DBManager;
+import WorldCupTimeline.src.object_classes.User;
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.text.*;
-import javafx.stage.*;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.util.ArrayList;
-
-import object_classes.*;
-import database.DBManager;
 
 public class SignUpGui extends Stage {
 	User newuser = new User();

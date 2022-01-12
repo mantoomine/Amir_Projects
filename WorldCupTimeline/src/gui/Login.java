@@ -1,19 +1,24 @@
-package gui;
+package WorldCupTimeline.src.gui;
+
+import WorldCupTimeline.src.object_classes.User;
+import javafx.geometry.HPos;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 
-import static database.DBManager.*;
-import static hashForPassword.PassHash.*;
-import javafx.geometry.*;
-import javafx.scene.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
-import javafx.scene.paint.*;
-import javafx.scene.text.*;
-import javafx.stage.*;
-
-import object_classes.*;
+import static WorldCupTimeline.src.database.DBManager.DBConnector;
+import static WorldCupTimeline.src.database.DBManager.getUserSalt;
+import static WorldCupTimeline.src.hashForPassword.PassHash.getSecurePassword;
 
 public class Login extends Stage{
 	protected User currentUser;

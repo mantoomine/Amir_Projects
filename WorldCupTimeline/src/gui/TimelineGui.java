@@ -1,26 +1,34 @@
-package gui;
+package WorldCupTimeline.src.gui;
 
-import java.util.*;
-
-import org.controlsfx.control.Rating;
-
+import WorldCupTimeline.src.database.DBManager;
+import WorldCupTimeline.src.object_classes.Event;
+import WorldCupTimeline.src.object_classes.Timeline;
+import WorldCupTimeline.src.object_classes.User;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.*;
-import javafx.scene.*;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.scene.paint.*;
-import javafx.scene.text.*;
-import javafx.stage.*;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.TextAlignment;
+import javafx.stage.Screen;
+import javafx.stage.Stage;
+import org.controlsfx.control.Rating;
 
-import object_classes.*;
-import database.DBManager;
+import java.util.ArrayList;
 
 public class TimelineGui extends Stage {
 	private static ArrayList<String> timelineNames;

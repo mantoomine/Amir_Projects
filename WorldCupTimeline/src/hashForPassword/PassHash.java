@@ -1,4 +1,4 @@
-package hashForPassword;
+package WorldCupTimeline.src.hashForPassword;
 
 import java.security.*;
 

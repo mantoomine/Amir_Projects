@@ -1,4 +1,4 @@
-package gui;
+package WorldCupTimeline.src.gui;
 
 import javafx.stage.Stage;
 import javafx.application.Application;

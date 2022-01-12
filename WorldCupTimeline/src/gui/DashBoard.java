@@ -1,27 +1,35 @@
-package gui;
+package WorldCupTimeline.src.gui;
 
-import java.io.File;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-
-import javax.swing.JOptionPane;
-
-import javafx.collections.*;
+import WorldCupTimeline.src.object_classes.Event;
+import WorldCupTimeline.src.object_classes.Timeline;
+import WorldCupTimeline.src.object_classes.User;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.*;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-import object_classes.*;
-import  static database.DBManager.*;
+
+import javax.swing.*;
+import java.io.File;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+
+import static WorldCupTimeline.src.database.DBManager.*;
+
 
 public class DashBoard extends Stage {
 	Scene home, edit, delete, create;

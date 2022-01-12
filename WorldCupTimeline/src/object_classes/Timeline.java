@@ -1,12 +1,14 @@
-package object_classes;
+package WorldCupTimeline.src.object_classes;
 
 //Imports
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 
-import static database.DBManager.*;
+import static WorldCupTimeline.src.database.DBManager.*;
 
 public class Timeline {
     private String creator;

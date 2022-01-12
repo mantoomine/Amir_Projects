@@ -1,14 +1,16 @@
-package database;
+package WorldCupTimeline.src.database;
 
-import java.io.*;
-import java.sql.*;
-import java.sql.Date;
-import java.time.*;
-import java.util.*;
+import WorldCupTimeline.src.object_classes.Event;
+import WorldCupTimeline.src.object_classes.User;
 
 import javax.swing.filechooser.FileSystemView;
+import java.io.*;
+import java.sql.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.ArrayList;
 
-import object_classes.*;
 
 public class DBManager extends DBConnection {
 
@@ -248,7 +250,8 @@ public class DBManager extends DBConnection {
 
 	// Timeline related Methods
 	// Inserts a user to table users
-	public static boolean insertTimeline(Timeline newTimeline, Connection con) {
+	public static boolean insertTimeline(
+			WorldCupTimeline.src.object_classes.Timeline newTimeline, Connection con) {
 		// Create a PreparedStatement
 		PreparedStatement prepStmt = null;
 
@@ -390,7 +393,8 @@ public class DBManager extends DBConnection {
 	}
 	
 	// Update a Timeline
-	public static boolean updateTimeline(String currentID, Timeline timeline, Connection con) {
+	public static boolean updateTimeline(String currentID,
+																			 WorldCupTimeline.src.object_classes.Timeline timeline, Connection con) {
 		// Create a PreparedStatement
 		PreparedStatement prepStmt = null;
 
@@ -986,7 +990,8 @@ public class DBManager extends DBConnection {
 	// 8 methods for inserting, updating and selecting data in table events
 	
 	// Creates and inserts an event to table events
-	public static boolean insertEventWithOutPic(Timeline timeline, Connection con) throws FileNotFoundException {
+	public static boolean insertEventWithOutPic(
+			WorldCupTimeline.src.object_classes.Timeline timeline, Connection con) throws FileNotFoundException {
 		// Create a PreparedStatement
 		PreparedStatement prepStmt = null;
 		boolean success = false;
@@ -1042,7 +1047,8 @@ public class DBManager extends DBConnection {
 	}
 	
 	// Creates and inserts an event to table events
-	public static boolean insertEventWithPic(Timeline timeline, Connection con) throws FileNotFoundException {
+	public static boolean insertEventWithPic(
+			WorldCupTimeline.src.object_classes.Timeline timeline, Connection con) throws FileNotFoundException {
 		// Create a PreparedStatement
 		PreparedStatement prepStmt = null;
 		boolean success = false;

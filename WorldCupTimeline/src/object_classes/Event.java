@@ -1,13 +1,14 @@
-package object_classes;
+package WorldCupTimeline.src.object_classes;
 
 //Imports
+
+import javafx.scene.image.Image;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-
-import javafx.scene.image.Image;
 
 public class Event {
 	@SuppressWarnings("unused")

@@ -1,4 +1,4 @@
-package database;
+package WorldCupTimeline.src.database;
 
 import java.sql.*;
 import java.util.Properties;

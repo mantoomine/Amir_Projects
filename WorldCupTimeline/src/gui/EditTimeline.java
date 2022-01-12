@@ -1,5 +1,13 @@
-package gui;
+package WorldCupTimeline.src.gui;
 
+import WorldCupTimeline.src.database.DBManager;
+import WorldCupTimeline.src.object_classes.Event;
+import WorldCupTimeline.src.object_classes.Timeline;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import javax.swing.*;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -7,18 +15,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.swing.JOptionPane;
-
-import javafx.scene.control.*;
-import javafx.stage.Stage;
-
-import database.DBManager;
-import object_classes.*;
-
 public class EditTimeline extends Stage{
 
     //Funciton to update timeline name with start date and end date in database.
-    public static String updateTimeline(Timeline seltimeline, DatePicker start, DatePicker end, TextField name, TextField startTime, TextField endTime, TextField timelineDescription, String keywords) {
+    public static String updateTimeline(
+        WorldCupTimeline.src.object_classes.Timeline seltimeline, DatePicker start, DatePicker end, TextField name, TextField startTime, TextField endTime, TextField timelineDescription, String keywords) {
         try {
             if(validation(start, end, name, seltimeline.getCreator())) {
                 //setting timeline name for edit

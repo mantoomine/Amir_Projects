@@ -1,12 +1,14 @@
-package object_classes;
+package WorldCupTimeline.src.object_classes;
 
-import java.sql.*;
+
+import WorldCupTimeline.src.hashForPassword.PassHash;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 
-import hashForPassword.PassHash;
+import static WorldCupTimeline.src.database.DBManager.*;
+import static WorldCupTimeline.src.hashForPassword.PassHash.getSecurePassword;
 
-import static database.DBManager.*;
-import static hashForPassword.PassHash.*;
 
 public class User {
     private String currentID;

@@ -1,4 +1,4 @@
-package gui;
+package WorldCupTimeline.src.gui;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -11,8 +11,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import static database.DBManager.*;
+
 import java.util.ArrayList;
+
+import static WorldCupTimeline.src.database.DBManager.*;
 
 public class Users extends Stage {
     private CheckBox[] cheBox;
